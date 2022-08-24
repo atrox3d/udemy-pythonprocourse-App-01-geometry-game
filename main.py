@@ -1,6 +1,7 @@
 from random import randint
 import turtle
 
+
 class Point:
 
     def __init__(self, x, y):
@@ -26,7 +27,7 @@ class Rectangle:
                (self.point2.y - self.point1.y)
 
 
-class GuiRectangle(Rectangle):      # is-a relationship: subclasses Rectangle
+class GuiRectangle(Rectangle):  # is-a relationship: subclasses Rectangle
 
     def draw(self, canvas):
         canvas.penup()
@@ -53,24 +54,24 @@ class GuiRectangle(Rectangle):      # is-a relationship: subclasses Rectangle
             self.point2.y - self.point1.y
         )
 
-        turtle.done()
+        # turtle.done()
+        turtle.Screen().exitonclick()
 
 
 canvas = turtle.Turtle()
 # Create rectangle object
 gui_rectangle = GuiRectangle(
-                    Point(
-                        randint(0, 100),
-                        randint(0, 100)
-                    ),
-                    Point(
-                        randint(101, 200),
-                        randint(101, 200)
-                    )
+    Point(
+        randint(0, 100),
+        randint(0, 100)
+    ),
+    Point(
+        randint(101, 200),
+        randint(101, 200)
+    )
 )
 
 gui_rectangle.draw(canvas=canvas)
-
 
 # # Create rectangle object
 # rectangle = Rectangle(Point(randint(0, 9), randint(0, 9)),
