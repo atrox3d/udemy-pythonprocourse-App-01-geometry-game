@@ -59,9 +59,16 @@ class GuiRectangle(Rectangle):      # is-a relationship: subclasses Rectangle
 canvas = turtle.Turtle()
 # Create rectangle object
 gui_rectangle = GuiRectangle(
-                    Point(randint(0, 9), randint(0, 9)),
-                    Point(randint(10, 19), randint(10, 19))
+                    Point(
+                        randint(0, 100),
+                        randint(0, 100)
+                    ),
+                    Point(
+                        randint(101, 200),
+                        randint(101, 200)
+                    )
 )
+
 gui_rectangle.draw(canvas=canvas)
 
 
