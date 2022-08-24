@@ -84,16 +84,21 @@ print("Rectangle Coordinates: ",
       gui_rectangle.point2.y)
 
 # Get point and area from user
-user_point = GuiPoint(float(input("Guess x: ")), float(input("Guess y: ")))
-user_area = float(input("Guess rectangle area: "))
+user_point = GuiPoint(
+                float(input("Guess x: ")),
+                float(input("Guess y: "))
+)
+user_area = float(
+                input("Guess rectangle area: ")
+)
 
 # Print out the game result
 print("Your point was inside rectangle: ", user_point.falls_in_rectangle(gui_rectangle))
 print("Your area was off by: ", gui_rectangle.area() - user_area)
 
-canvas = turtle.Turtle()
-gui_rectangle.draw(canvas=canvas)
-user_point.draw(canvas)
+canvas = turtle.Turtle()                # initialize turtle
+gui_rectangle.draw(canvas=canvas)       # draw rectangle
+user_point.draw(canvas)                 # draw point
 
 # turtle.done()
-turtle.Screen().exitonclick()
+turtle.Screen().exitonclick()           # wait for click
